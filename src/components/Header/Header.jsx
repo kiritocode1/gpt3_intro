@@ -5,23 +5,13 @@ import SearchIcon from "@material-ui/icons/Search";
 //! Search is where item is 
 
 import useStyles from "./styles";
-
-
-
-
-
-
-
-
-
-
 const Header = () => {
     const classes = useStyles();
     return (
         <AppBar position='static'>
             <Toolbar className={classes.toolbar}>
                 <Typography variant="h5" className={classes.title}>
-                    Travel Advisor
+                    TravelBird
                 </Typography>
                 <Box display="flex">
                     <Typography variant="h6" className={classes.title}>

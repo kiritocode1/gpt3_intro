@@ -11,7 +11,7 @@ const Map = () => {
     // ?turns styles from the styles.js
     const isMobile = useMediaQuery('(min-width:600px)');
     //? isMobile variable will turn false when the screen-width is larger than 600 px ;
-    const coordinates={lat:0, lng:0}
+    const coordinates={lat:18.5204, lng: 73.8567}
     return (
         <div className={classes.mapContainer}>
             <GoogleMapReact bootstrapURLKeys={{ key: 'AIzaSyAsuP38ZcJiZfB-dIicFOVOvsycSvrPwgk' }} defaultCenter={coordinates} center={coordinates} defaultZoom={14} margin={[50,50,50,50]} options={''} onChange={''} onChildClick={''}>
