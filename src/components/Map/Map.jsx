@@ -16,7 +16,8 @@ const Map = ({setCoordinates,setBounds,coordinates}) => {
         <div className={classes.mapContainer}>
             <GoogleMapReact bootstrapURLKeys={{ key: 'AIzaSyAsuP38ZcJiZfB-dIicFOVOvsycSvrPwgk' }} defaultCenter={coordinates} center={coordinates} defaultZoom={14} margin={[50,50,50,50]} options={''} onChange={(e)=>{
                 console.log(e);
-                setCoordinates({lat:e.center.lat,lng:e.center.lng});
+                setCoordinates({ lat: e.center.lat, lng: e.center.lng });
+                setBounds({ne:e.marginBounds.ne,sw:e.marginBounds.sw})
             }} onChildClick={''}>
                 {/* to get the key we goto google developer's console to interact 
                 get the key here ->  https://console.cloud.google.com/projectcreate 

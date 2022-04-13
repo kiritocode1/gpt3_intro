@@ -19,10 +19,11 @@ import { getPlacesData } from "./API";
 
 function App() {
   const [places, setPlaces] = useState([]);
-  const [coordinates, setCoordinates] = useState({});
+  const [coordinates, setCoordinates] = useState({lat:0,lng:0});
   const [bounds, setBounds] = useState(null);
   // top right and bottom left corners are called bounds ;
   useEffect(() => {
+    console.log({"coordinates": coordinates,"bounds": bounds });
     getPlacesData()
       .then(
         (data) => {
@@ -31,7 +32,7 @@ function App() {
           console.log("set automatically");
       }
     )
-  },[]);//only at the start of app 
+  },[coordinates,bounds]);//only at the start of app 
   return (
     <>
       
