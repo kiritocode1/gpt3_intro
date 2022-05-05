@@ -46,10 +46,10 @@ const List = () => {
             </FormControl>
             <Grid container spacing={3} className={classes.list}>
                 {/* places? means if places is there then only we map and use it otherwise let it be .  */}
-                {places?.map((place, i) => (
+                {places.map((place, i) => (
                     <Grid item key={i} xs={12}>
                         <PlaceDetails place={place} />
-                        {/* card will be rendered automatically once  we import it from respective jsx  */}
+                        {/* card will be rendered automatically once  we import it from respective jsx which we actually did . fuck the error  */}
                     </Grid>
                 ))}
             </Grid>
