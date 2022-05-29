@@ -17,14 +17,23 @@ function App() {
   const [places, setPlaces] = useState([]);
   console.log(places);
   const [coordinates, setCoordinates] = useState({lat:0,lng:0});
-  const [bounds, setBounds] = useState(null);
+  const [bounds, setBounds] = useState({sw:69, ne:42});
   // top right and bottom left corners are called bounds ;
+
+
+
+
+
+
+
+
+  //! /////////////////////////////////////////////////////////////////
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(({ coords: { latitude, longitude } }) => {
       setCoordinates({ lat: latitude, lng: longitude });
     })
   }, []);
-
+//! /////////////////////////////////////////////////////////////////
 
 // ! most important useEffect , it takes the 
   useEffect(() => {
@@ -44,7 +53,7 @@ function App() {
   
   
   
-  
+  //! ///////////////////////////////////////////////////////////////////////////
   return (
     <>
       
